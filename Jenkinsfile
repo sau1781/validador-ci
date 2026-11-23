@@ -47,6 +47,13 @@ pipeline {
             }
         }
 
+        stage("Analizar") {
+            steps {
+                sh "make analyze"
+                archiveArtifacts artifacts: "build/reports/cppcheck.txt"
+            }
+        }
+
         stage("Empaquetar") {
             when {
                 allOf {
