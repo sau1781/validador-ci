@@ -13,7 +13,7 @@ int cred_formato_valido(const char *uid)
             return 0;
         }
     }
-    return 1;
+    return 1
 }
 
 int cred_checksum(const char *uid)
